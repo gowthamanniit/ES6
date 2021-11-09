@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function myfun() {       
+        
+        class Student
+        {            
+            constructor(rn,nam)
+            {
+                this.rno=rn;
+                this.name=nam;
+                alert("test");
+            }            
+             dis() {
+                //document.write(this.rno);
+                //document.write(this.name);
+                return 'roll no:'+this.rno+' name = '+this.name;
+            }
+        }
+        var r=aaa.t1.value;
+        var n=aaa.t2.value;
+        s1=new Student(r,n); // automatic arg constructor        
+        ans=s1.dis(); // user call manual
+        //alert(ans);
+        document.getElementById("root").innerHTML=ans;
+    }
+    </script>
+
+</head>
+<body>
+    <form name="aaa">
+
+        Enter roll no : <input type="Text" name="t1">
+        <br>
+        Enter name : <input type="Text" name="t2">
+
+        <input type="button" value="show data" onclick="myfun()">
+    </form>
+    <div id="root"></div>
+</body>
+</html>
