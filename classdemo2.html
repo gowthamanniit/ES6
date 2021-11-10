@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function myfun() {
+            
+            class Student
+            {
+                    constructor(name)
+                    {
+                        this.name=name;
+                    }
+                    display()
+                {
+                    alert(this.name +" "+this.mark)
+                    document.getElementById("res").innerHTML=this.name + " " + this.mark;
+                }
+            }
+            
+            class Teacher extends Student
+            {
+                constructor(name,mark)
+                {
+                    super(name);
+                    this.mark=mark;
+                }
+               display()
+               {
+                   super.display();
+                   alert("priorty first teacher");
+               }
+            }
+            t1=new Teacher("ajay",189);
+            t1.display();
+        }
+    </script>
+</head>
+<body onload="myfun()">
+    <div id="res"></div>
+</body>
+</html>
