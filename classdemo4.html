@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        /*function myfun() {  // old model normal function
+            return "<h1> Hai Ajay THimothi</h1>";
+        }*/
+        /*function test() {
+         document.getElementById("ans").innerHTML=myfun();
+        }*/
+        
+        
+        //myfun=()=> "<h1> Hai Ajay Timothi single line</h1>";
+        //or
+        
+        myfun=(v1,v2,v3)=>{
+            var ans="lw";
+            return(
+                "result:"+v1+"  "+v2+"  "+ans+"  "+v3
+            );
+        }
+        test=()=>{    // arrow function es6
+            document.getElementById("ans").innerHTML=myfun("hello ajay","hello timothi",ans);
+        }        
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" onclick="test()" value="clickme">
+    </form>
+    Result:
+    <div id="ans" />    
+</body>
+</html>
